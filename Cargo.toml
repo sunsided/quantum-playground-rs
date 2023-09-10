@@ -1,0 +1,23 @@
+[package]
+name = "quantum-playground-rs"
+description = "Quantum computing library experiments"
+repository = "https://github.com/sunsided/quantum-playground-rs"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "cswap"
+path = "src/cswap.rs"
+
+[[bin]]
+name = "macros"
+path = "src/macros.rs"
+
+[[bin]]
+name = "inverses"
+path = "src/inverses.rs"
+
+[dependencies]
+anyhow = "1.0.75"
+qip = { version = "1.4.0", git = "https://github.com/sunsided/RustQIP", rev = "ca93548de9caf5b0a6f2429435a6ef9550458fbd", features = ["macros"] }
+qip-macros = "1.0.0"
